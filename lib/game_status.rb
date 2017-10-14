@@ -33,11 +33,14 @@ end
 
 def full?(board)
   # board.all? { |position| position_taken?(board, position) }
-  full = true
-  board.each { |position|
-    if !position_taken?(board, position)
-      full = false
-    end
-  }
-  full
+  board.all? { |position| position != nil && position != " " }
+  # full = true
+  # i = 0
+  # board.each { |position|
+  #   puts "#{i}: #{board[i]}"
+  #   if !position_taken?(board, 0)
+  #     full = false
+  #   end
+  # }
+  # full
 end
