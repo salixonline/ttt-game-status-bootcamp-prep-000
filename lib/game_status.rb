@@ -52,3 +52,9 @@ end
 def over?(board)
   full?(board) || won?(board) || draw?(board) ? true : false
 end
+
+def winner(board)
+  if win_combination = won?(board)
+    return board[win_combination[0]]
+  end
+end
