@@ -44,3 +44,10 @@ def full?(board)
   # }
   # full
 end
+
+def draw?(board)
+  if full? && !won?(board)
+    return true
+  end
+  false
+end
