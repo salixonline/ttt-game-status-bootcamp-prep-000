@@ -33,10 +33,11 @@ end
 
 def full?(board)
   # board.all? { |position| position_taken?(board, position) }
+  full = true
   board.each { |position|
     if !position_taken?(board, position)
-      return false
+      full = false
     end
   }
-  true
+  full
 end
